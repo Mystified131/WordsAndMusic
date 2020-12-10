@@ -1,8 +1,19 @@
 #This code imports the necessary modules.
 
 import os
+import datetime
 
-srchstr = 'C:\\MediaFiles\\OriginalAudio\\Sounds\\Acid_Loops'
+right_now = datetime.datetime.now().isoformat()
+list = []
+
+for i in right_now:
+    if i.isnumeric():
+        list.append(i)
+
+tim = ("".join(list))
+  
+
+srchstr = 'C:\\Users\\mysti\\Media_Files\\Sounds\\Acid_Loops'
 
 content =[]
 
@@ -36,7 +47,9 @@ songmagic = sorted(worddic.items(), key=lambda x: x[1], reverse=True)
 mlen = len(songmagic)
 muslen = str(mlen)
 
-outfile = open("musicwords.txt", "w")
+op = "musicwords " + tim + ".txt"
+
+outfile = open(op, "w")
 
 outfile.write("Here are words found in these files, in order of the number of times they appear:" + '\n')
 outfile.write("There are a total of " + muslen + " words included in this list." + '\n')
@@ -53,6 +66,8 @@ print("")
 print("Your word list has been created, and that document can be found in the same folder as this code. Thank you.")
 print("")
 
-os.system("notepad.exe musicwords.txt")
+opp = "notepad.exe musicwords " + tim + ".txt"
+
+os.system(opp)
 
 ## THE GHOST OF THE SHADOW ##
