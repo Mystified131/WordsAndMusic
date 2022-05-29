@@ -13,7 +13,8 @@ for i in right_now:
 tim = ("".join(list))
   
 
-srchstr = 'C:\\Users\\mysti\\Media_Files\\Sounds\\Acid_Loops'
+srchstr = 'G:\\OriginalAudio\\Sounds\\Acid_Loops'
+
 
 content =[]
 
