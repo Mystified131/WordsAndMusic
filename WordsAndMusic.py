@@ -13,7 +13,15 @@ for i in right_now:
 tim = ("".join(list))
   
 
-srchstr = 'G:\\OriginalAudio\\Sounds\\Acid_Loops'
+#srchstr = 'G:\\OriginalAudio\\Sounds\\Acid_Loops'
+
+srchstr = 'E:\\Acid_Loops'
+
+print("")
+
+print("Scanning and counting files. This might take 5-10 minutes.")
+
+print("")
 
 
 content =[]
@@ -22,7 +30,7 @@ for subdir, dirs, files in os.walk(srchstr):
     for file in files:
         filepath = subdir + os.sep + file
 
-        if  filepath.endswith(".wav"): 
+        if  filepath.endswith(".wav") or filepath.endswith(".ogg"): 
             #content.append(filepath)
             astr = str(file)
             bstr = astr[0:-4]
